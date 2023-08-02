@@ -1,0 +1,4 @@
+name: DiamondSpleef
+version: '${project.version}'
+main: dev.hyperlisk.diamondspleef.DiamondSpleef
+api-version: '1.20'
