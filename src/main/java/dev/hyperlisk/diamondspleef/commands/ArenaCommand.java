@@ -7,7 +7,7 @@ import dev.hyperlisk.diamondspleef.DiamondSpleef;
 
 
 @CommandAlias("arena|ar")
-public class ArenaCommand extends BaseCommand {
+public class ArenaCommand extends DiamondSpleefCommandBase {
 
     @Dependency
     private DiamondSpleef diamondSpleef;
@@ -15,9 +15,5 @@ public class ArenaCommand extends BaseCommand {
     public ArenaCommand(DiamondSpleef diamondSpleef) {
         this.diamondSpleef = diamondSpleef;
     }
-
-
-
-
 
 }
