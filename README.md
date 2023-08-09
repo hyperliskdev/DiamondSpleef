@@ -19,11 +19,6 @@ There are several commands that help with the modularity and customization of th
 
 ### Commands
 
-#### `ds.arena`
-- `/ds arena create <name>`
-- `/ds arena delete <name>`
-- `/ds arena list`
-- 
 
 
 
