@@ -2,11 +2,11 @@ package dev.hyperlisk.diamondspleef.database;
 
 import java.sql.Connection;
 
-public class DatabaseHandler {
+public class DatabaseManager {
 
     private Connection connection;
 
-    public DatabaseHandler() {
+    public DatabaseManager() {
 
         // TODO: Get connection info from config.yml
 

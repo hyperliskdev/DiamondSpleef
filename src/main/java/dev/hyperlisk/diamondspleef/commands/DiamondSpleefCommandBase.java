@@ -3,6 +3,10 @@ package dev.hyperlisk.diamondspleef.commands;
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.CommandAlias;
 import co.aikar.commands.annotation.Default;
+import dev.hyperlisk.diamondspleef.gui.PlayerMenuGui;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.geysermc.floodgate.api.FloodgateApi;
 
 
 /**
@@ -13,11 +17,22 @@ import co.aikar.commands.annotation.Default;
 public class DiamondSpleefCommandBase extends BaseCommand {
 
     @Default
-    public void onDefault() {
-        // TODO: Implement this
+    public void onDefault(CommandSender sender, String[] args) {
+        // TODO: Implement the basic menu for ds|diamondspleef
+        if (sender instanceof Player) {
+            Player player = (Player) sender;
+            PlayerMenuGui gui = new PlayerMenuGui();
+            if (FloodgateApi.getInstance().isFloodgatePlayer(player.getUniqueId())) {
+                // Send the player menu CustomForm (Bedrock Player)
 
-        // If a player executes this, give the base player gui where they can select from a list of spleef games to join.
-        // If a console executes this, give them a list of commands they can execute.
+
+            } else {
+                // Send the regular inventory menu to the player (Java Player)
+            }
+
+        }
+
+
 
     }
 
