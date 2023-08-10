@@ -1,20 +1,20 @@
 package dev.hyperlisk.diamondspleef.commands;
 
 import co.aikar.commands.BaseCommand;
-import co.aikar.commands.annotation.CommandAlias;
-import co.aikar.commands.annotation.Dependency;
+import co.aikar.commands.annotation.*;
 import dev.hyperlisk.diamondspleef.DiamondSpleef;
+import org.bukkit.command.CommandSender;
 import org.geysermc.floodgate.api.FloodgateApi;
 
 
-@CommandAlias("arena|ar")
+@Subcommand("arena|ar")
 public class ArenaCommand extends DiamondSpleefCommandBase {
 
-    @Dependency
-    private DiamondSpleef diamondSpleef;
+    @Default
+    @CommandPermission("diamondspleef.arena")
+    public void onDefault(CommandSender sender, String[] args) {
 
-
-    public ArenaCommand(FloodgateApi floodgateApi) {
-        super(floodgateApi);
     }
+
+
 }
