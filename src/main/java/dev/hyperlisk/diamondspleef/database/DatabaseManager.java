@@ -10,11 +10,12 @@ public class DatabaseManager {
 
         // TODO: Get connection info from config.yml
 
-        // TODO: Pass data to the initalizer
-        initDatabaseHandler();
+        init();
     }
 
-    private void initDatabaseHandler() {
+    private void init() {
+
+
 
     }
 

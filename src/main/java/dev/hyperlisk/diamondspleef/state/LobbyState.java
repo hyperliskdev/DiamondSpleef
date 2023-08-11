@@ -1,6 +1,7 @@
 package dev.hyperlisk.diamondspleef.state;
 
-public class SpleefManager {
+public class LobbyState extends SpleefState {
+
 
 
 

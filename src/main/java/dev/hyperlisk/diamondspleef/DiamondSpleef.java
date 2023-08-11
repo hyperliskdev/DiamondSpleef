@@ -2,7 +2,7 @@ package dev.hyperlisk.diamondspleef;
 
 import co.aikar.commands.PaperCommandManager;
 import dev.hyperlisk.diamondspleef.commands.ArenaCommand;
-import dev.hyperlisk.diamondspleef.commands.DiamondSpleefCommandBase;
+import dev.hyperlisk.diamondspleef.commands.DiamondSpleefCommand;
 import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -35,7 +35,7 @@ public final class DiamondSpleef extends JavaPlugin {
         commandManager.enableUnstableAPI("brigadier");
 
         // Register Commands
-        commandManager.registerCommand(new DiamondSpleefCommandBase());
+        commandManager.registerCommand(new DiamondSpleefCommand());
         commandManager.registerCommand(new ArenaCommand());
 
     }

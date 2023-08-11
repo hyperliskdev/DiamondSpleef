@@ -1,4 +1,6 @@
 package dev.hyperlisk.diamondspleef.commands;
 
-public class KitCommand {
+import co.aikar.commands.BaseCommand;
+
+public class KitCommand extends BaseCommand {
 }
