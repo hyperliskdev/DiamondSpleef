@@ -21,6 +21,14 @@ A DiamondSpleef game will have several main components:
 - The game type (free-for-all, teams or 1v1)
 - The kits
 
+### Arenas
+
+An arena has alot of related data. This data is stored in the database. The data includes:
+- The name of the arena
+- The location of the arena
+
+
+
 ### Commands
 
 

@@ -21,11 +21,10 @@ public class ArenaCommand extends BaseCommand {
      * show a list of arena subcommands the user can use and their descriptions.
      *
      * @param sender
-     * @param args
      */
     @Default
     @CommandPermission("diamondspleef.arena")
-    public void onArena(CommandSender sender, String[] args) {
+    public void onArena(CommandSender sender) {
         //TODO: List all subcommands and their descriptions.
         sender.sendMessage("Subcommands: create, delete, list, set, edit");
 
@@ -41,7 +40,7 @@ public class ArenaCommand extends BaseCommand {
      */
     @Subcommand("create|c")
     @CommandPermission("diamondspleef.arena.create")
-    public void onCreate(CommandSender sender, String[] args) {
+    public void onArenaCreate(CommandSender sender, String[] args) {
         sender.sendMessage("You have created an arena.");
 
     }
@@ -57,7 +56,7 @@ public class ArenaCommand extends BaseCommand {
      */
     @Subcommand("delete|d")
     @CommandPermission("diamondspleef.arena.delete")
-    public void onDelete(CommandSender sender, String[] args) {
+    public void onArenaDelete(CommandSender sender, String[] args) {
         sender.sendMessage("You have deleted an arena.");
     }
 
@@ -69,7 +68,7 @@ public class ArenaCommand extends BaseCommand {
      */
     @Subcommand("list|l")
     @CommandPermission("diamondspleef.arena.list")
-    public void onList() {
+    public void onArenaList() {
 
     }
 
@@ -94,7 +93,7 @@ public class ArenaCommand extends BaseCommand {
     @Subcommand("set|s")
     @Syntax("<arena name> <x> <y> <z> [x] [y] [z]")
     @CommandPermission("diamondspleef.arena.set")
-    public void onSet(CommandSender sender, String[] args) {
+    public void onArenaSet(CommandSender sender, String[] args) {
         String arenaName = args[0];
 
         double[] cornerA = new double[]{
@@ -119,7 +118,7 @@ public class ArenaCommand extends BaseCommand {
 
     @Subcommand("edit|e")
     @CommandPermission("diamondspleef.arena.edit")
-    public void onEdit() {
+    public void onArenaEdit() {
 
     }
 

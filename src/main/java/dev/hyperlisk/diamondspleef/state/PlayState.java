@@ -2,7 +2,9 @@ package dev.hyperlisk.diamondspleef.state;
 
 import org.bukkit.event.EventHandler;
 
-public class LobbyState extends SpleefState {
+public class PlayState extends SpleefState {
+
+
 
     @Override
     public void onEnable() {
@@ -18,7 +20,4 @@ public class LobbyState extends SpleefState {
     public SpleefState getNextState() {
         return null;
     }
-
-
-
 }

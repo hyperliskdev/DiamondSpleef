@@ -9,24 +9,20 @@ import org.bukkit.plugin.java.JavaPlugin;
 @Getter
 public final class DiamondSpleef extends JavaPlugin {
 
-    public static DiamondSpleef plugin;
+    @Getter
+    public static DiamondSpleef instance;
 
     @Getter
     public static PaperCommandManager commandManager;
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
-        plugin = this;
+        instance = this;
         registerCommands();
-
     }
 
     @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-
-    }
+    public void onDisable() {}
 
 
 

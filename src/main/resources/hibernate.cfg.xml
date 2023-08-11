@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection properties with placeholders -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://%database.host%:%database.port%/%database.name%</property>
+        <property name="hibernate.connection.username">%database.username%</property>
+        <property name="hibernate.connection.password">%database.password%</property>
+
+        <!-- Hibernate dialect for MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Enable automatic schema creation/update -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Entity classes -->
+        <mapping class="dev.hyperlisk.diamondspleef.database.models.Arena"/>
+        <mapping class="dev.hyperlisk.diamondspleef.database.models.Kit"/>
+        <mapping class="dev.hyperlisk.diamondspleef.database.models.PlayerStat"/>
+    </session-factory>
+</hibernate-configuration>
